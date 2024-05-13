@@ -14,6 +14,7 @@ parser code
         return this.s;
 }
 :};
+
 terminal Int, If,Else, While, Linea, Igual, Suma, Resta, Multiplicacion, Division, Parentesis_a, Parentesis_c, Llave_a, Llave_c, Main, P_coma, Identificador, Numero, ERROR;
 
 non terminal INICIO, SENTENCIA, DECLARACION;
@@ -22,5 +23,5 @@ start with INICIO;
 
 INICIO ::= Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c
 ;
-SENTENCIA ::= Int Identificafor P_mcoma | Int Identificafor Igual Numero P_coma
+SENTENCIA ::= Int Identificador P_coma | Int Identificador Igual Numero P_coma
 ;
