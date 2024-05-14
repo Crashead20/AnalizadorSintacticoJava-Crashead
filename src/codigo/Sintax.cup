@@ -21,7 +21,9 @@ non terminal INICIO, SENTENCIA, DECLARACION;
 
 start with INICIO;
 
-INICIO ::= Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c
+INICIO ::= Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c 
 ;
 SENTENCIA ::= Int Identificador P_coma | Int Identificador Igual Numero P_coma
 ;
+
+
