@@ -6,3 +6,4 @@ java-cup-11a.jar
 java_cup.jar
 manifest.mf
 nbproject/
+/dist/
