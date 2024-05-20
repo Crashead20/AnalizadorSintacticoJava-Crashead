@@ -15,15 +15,39 @@ parser code
 }
 :};
 
-terminal Int, If,Else, While, Linea, Igual, Suma, Resta, Multiplicacion, Division, Parentesis_a, Parentesis_c, Llave_a, Llave_c, Main, P_coma, Identificador, Numero, ERROR;
+terminal Int, If,Else, While, Linea, Igual, Suma, Resta, Multiplicacion,
+Division, Parentesis_a, Parentesis_c, Llave_a, Llave_c, Main, P_coma, Identificador, Numero, ComillaDoble, Punto,
+ERROR;
 
 non terminal INICIO, SENTENCIA, DECLARACION;
 
 start with INICIO;
 
-INICIO ::= Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c 
+INICIO ::=
+Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c 
 ;
-SENTENCIA ::= Int Identificador P_coma | Int Identificador Igual Numero P_coma
+SENTENCIA ::=
+DECLARACION
 ;
+DECLARACION ::= 
+Int Identificador P_coma |
+Int Identificador Igual Numero P_coma |
+Int Identificador Igual Numero P_coma Int Identificador P_coma |
+Int Identificador P_coma Int Identificador Igual Numero P_coma |
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma |
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma Int Identificador P_coma |
 
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma Int Identificador P_coma
+Identificador Igual Identificador Suma Identificador P_coma |
 
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma Int Identificador P_coma
+Identificador Igual Identificador Resta Identificador P_coma |
+
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma Int Identificador P_coma
+Identificador Igual Identificador Multiplicacion Identificador P_coma |
+
+Int Identificador Igual Numero P_coma Int Identificador Igual Numero P_coma Int Identificador P_coma
+Identificador Igual Identificador Division Identificador P_coma |
+
+Identificador Punto Identificador Punto Identificador Parentesis_a ComillaDoble Identificador ComillaDoble Parentesis_c P_coma
+;

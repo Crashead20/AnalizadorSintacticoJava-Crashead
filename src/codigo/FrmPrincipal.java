@@ -141,6 +141,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         txtResultado2.setColumns(20);
         txtResultado2.setRows(5);
+        txtResultado2.setBorder(javax.swing.BorderFactory.createTitledBorder("Identificador de Tokens"));
         jScrollPane1.setViewportView(txtResultado2);
 
         btnArchivo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -161,6 +162,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         txtResultado1.setColumns(20);
         txtResultado1.setRows(5);
+        txtResultado1.setBorder(javax.swing.BorderFactory.createTitledBorder("Texto a Analizar"));
         jScrollPane2.setViewportView(txtResultado1);
 
         btnLimpiar1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -177,6 +179,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         txtAnalizarSin.setColumns(20);
         txtAnalizarSin.setRows(5);
+        txtAnalizarSin.setBorder(javax.swing.BorderFactory.createTitledBorder("Retorno de Lectura sintactica"));
         jScrollPane3.setViewportView(txtAnalizarSin);
 
         btnAnalizarSin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -233,10 +236,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLimpiar1)
-                    .addComponent(btnAnalizar2)
-                    .addComponent(btnArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnArchivo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLimpiar1)
+                        .addComponent(btnAnalizar2)))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)

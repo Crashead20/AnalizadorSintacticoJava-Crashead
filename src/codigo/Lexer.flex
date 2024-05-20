@@ -28,6 +28,8 @@ while {lexeme=yytext(); return While;}
 "}" {lexeme=yytext(); return Llave_c;}
 "main" {lexeme=yytext(); return Main;}
 ";" {lexeme=yytext(); return P_coma;}
+"\"" {lexeme=yytext(); return ComillaDoble;}
+"." {lexeme=yytext(); return Punto;}
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 ("(-"{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
  . {return ERROR;}
